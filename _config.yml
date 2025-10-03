@@ -44,20 +44,7 @@ defaults:
     values:
       layout: "chapter"
 
-# Navigation
-navigation:
-  - title: Home
-    url: /
-  - title: Quick Start
-    url: /#quick-start
-  - title: Feature Comparison
-    url: /#feature-comparison
-  - title: Commands
-    url: /#commands
-  - title: Configuration
-    url: /#configuration
-  - title: Advanced Topics
-    url: /#advanced-topics
+# Navigation (removed - using TOC in content instead)
 
 # SEO and social
 twitter:
