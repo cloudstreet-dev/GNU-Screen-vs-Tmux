@@ -1,0 +1,84 @@
+# Jekyll configuration for GNU Screen vs Tmux Guide
+title: "GNU Screen vs Tmux"
+description: "A Comprehensive Guide to Terminal Multiplexers"
+author: "CloudStreet Dev"
+email: "info@cloudstreet.dev"
+baseurl: "/GNU-Screen-vs-Tmux"
+url: "https://cloudstreet-dev.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Kramdown settings for better code highlighting
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# Collections for organizing content
+collections:
+  chapters:
+    output: true
+    permalink: /:collection/:name
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "chapters"
+    values:
+      layout: "chapter"
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Quick Start
+    url: /#quick-start
+  - title: Feature Comparison
+    url: /#feature-comparison
+  - title: Commands
+    url: /#commands
+  - title: Configuration
+    url: /#configuration
+  - title: Advanced Topics
+    url: /#advanced-topics
+
+# SEO and social
+twitter:
+  username: cloudstreetdev
+  card: summary_large_image
+
+social:
+  name: CloudStreet Dev
+  links:
+    - https://github.com/cloudstreet-dev
+
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .git
+  - .github
+  - LICENSE

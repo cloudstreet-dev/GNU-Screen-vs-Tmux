@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ "/assets/favicon.png" | relative_url }}">
+    {%- feed_meta -%}
+  </head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+      <div class="wrapper">
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <nav class="site-nav">
+          {%- for item in site.navigation -%}
+            <a class="page-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {%- endfor -%}
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article>
+          {{ content }}
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="footer-col">
+          <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author | escape }} • Built with Jekyll and GitHub Pages</p>
+          <p>{{ site.description | escape }}</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
